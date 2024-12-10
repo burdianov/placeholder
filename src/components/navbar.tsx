@@ -3,7 +3,7 @@ import { navLinks } from "./router";
 
 export default function Navbar() {
   return (
-    <nav className="w-screen h-12 bg-violet-600 flex gap-4 items-center justify-center">
+    <nav className="w-screen h-12 bg-violet-600 flex gap-4 items-center justify-center fixed mb-12">
       {navLinks.map((link) => (
         <NavLink
           key={link.id}

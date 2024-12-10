@@ -6,7 +6,7 @@ import About from "../pages/about";
 import Contact from "../pages/contact";
 import NotFound from "../pages/not-found";
 import Todos from "../pages/todos";
-import TodoItem from "../pages/todo";
+import TodoItem from "../pages/edit-todo";
 
 export const navLinks = [
   {

@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+
 import { getTodoById, getTodos } from "./api";
 
 export function useTodos() {
@@ -10,7 +11,7 @@ export function useTodos() {
 
 export function useGetTodoById(id: number) {
   return useQuery({
-    queryKey: ["todo"],
+    queryKey: ["todo", id],
     queryFn: () => getTodoById(id),
   });
 }

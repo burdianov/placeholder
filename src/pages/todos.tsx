@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+
 import Spinner from "../components/spinner";
 import { useTodos } from "../services/queries";
+import TodoComponent from "../components/todo-component";
 
 export default function Todos() {
   const todosQuery = useTodos();
@@ -26,16 +28,7 @@ export default function Todos() {
       <h1 className="mb-4">Todos</h1>
       <div className="flex flex-col gap-2">
         {todosQuery.data.map(
-          (todo) =>
-            todo.id && (
-              <Link
-                key={todo.id}
-                to={`/todos/${todo.id}`}
-                className="px-4 py-2 bg-green-500 rounded hover:bg-green-400 transition"
-              >
-                {todo.title}
-              </Link>
-            )
+          (todo) => todo.id && <TodoComponent key={todo.id} {...todo} />
         )}
       </div>
     </div>
